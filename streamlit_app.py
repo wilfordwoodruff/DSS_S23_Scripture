@@ -47,7 +47,7 @@ date_chart = (alt.Chart(plot_data)
               .mark_line(point=True)
               .encode(
                   x=alt.X('dates:T', title='Date'),
-                  y=alt.Y('count:Q', title='Number of Matches'),
+                  y=alt.Y('count:Q', title='Number of Matches', scale=alt.Scale(domain=[0, 12])),
                   tooltip=['dates:T', 'count:Q']
     )
 )
