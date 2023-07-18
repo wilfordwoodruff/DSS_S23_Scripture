@@ -50,11 +50,11 @@ data_scriptures = data_scriptures.rename(columns={'text':'text_scriptures'})
 
 # filter to certain volumes
 volume_titles = [
-    #  'Old Testament',
-    #  'New Testament',
-    #  'Book of Mormon',
+     'Old Testament',
+     'New Testament',
+     'Book of Mormon',
      'Doctrine and Covenants',
-    #  'Pearl of Great Price',
+     'Pearl of Great Price',
      ]
 data_scriptures = data_scriptures.query("volume_title in @volume_titles")
 # query = "verse_title == 'Doctrine and Covenants 136:11'|verse_title == 'Doctrine and Covenants 136:12'|verse_title == 'Doctrine and Covenants 136:13'|verse_title == 'Doctrine and Covenants 136:14'|verse_title == 'Doctrine and Covenants 136:15'|verse_title == 'Doctrine and Covenants 136:16'|verse_title == 'Doctrine and Covenants 136:17'"
