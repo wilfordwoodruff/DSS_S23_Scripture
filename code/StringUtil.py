@@ -69,7 +69,7 @@ class StringUtil:
 
     @staticmethod
     def str_count_words(string):
-        return len(StringUtil.str_split(string))
+        return len(string.split())
 
     @staticmethod
     def str_remove(string, regex):
@@ -180,14 +180,3 @@ class StringUtil:
             data_chunks.append(data_chunk)
 
         return data_chunks
-
-    def compute_similarity(vectorizer, text1, text2):
-        raw_percentage_match = StringUtil.str_percentage_match(text1, text2)
-        if raw_percentage_match > 0.1:
-            tfidf_matrix_woodruff = vectorizer.transform([text1])
-            tfidf_matrix_scriptures = vectorizer.transform([text2])
-            cosine_score = cosine_similarity(tfidf_matrix_woodruff, tfidf_matrix_scriptures)[0][0]
-            # cosine_scores = pd.DataFrame(cosine_scores, columns=['cosine_score'])
-            return round(cosine_score, 5)
-        else:
-            return 0
