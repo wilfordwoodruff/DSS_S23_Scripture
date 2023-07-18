@@ -10,7 +10,7 @@ Society's Scripture Matching
 - [StringUtil.py](code/StringUtil.py) string and pandas dataframe utility class to fix some the existing pandas dataframe methods.
 
 ## data
-- [data_matches_extensions.csv](data/data_matches_extensions.csv) csv containing all the current matches found.
+- [data_matches.csv](data/data_matches.csv) csv containing all the current matches found.
 - [data_woodruff_raw.csv](data/data_woodruff_raw.csv) csv containing original woodruff entries. 
 - [data_scriptures.csv](data/data_scriptures.csv) clean csv of all verses in standard works.
 
